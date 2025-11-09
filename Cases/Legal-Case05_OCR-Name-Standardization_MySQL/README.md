@@ -65,16 +65,11 @@ Standardize participant names through comprehensive cleansing to ensure consiste
 \## Expected Output
 
 
-
-| original\_name        | standardized\_name  | participant\_type | case\_role         |
-
-|---------------------|-------------------|------------------|-------------------|
-
-| "Élise Tremblay  "   | "Élise tremblay"  | witness          | Key witness       |
-
-| "LIAM BROWN   "      | "Liam brown"      | defendant        | Primary accused   |
-
-| "jean-pierre martin" | "Jean-pierre martin" | defendant    | Accused party     |
+| original_name          | standardized_name    | participant_type | case_role       |
+|------------------------|----------------------|------------------|-----------------|
+| "Élise Tremblay  "     | "Élise tremblay"     | witness          | Key witness     |
+| "LIAM BROWN   "        | "Liam brown"         | defendant        | Primary accused |
+| "jean-pierre martin"   | "Jean-pierre martin" | defendant        | Accused party   |
 
 
 
@@ -99,21 +94,13 @@ Standardize participant names through comprehensive cleansing to ensure consiste
 \## Digitization workflows typically follow these stages:
 
 
-
-| Step | Objective | Example SQL / Tooling |
-
-|------|-----------|-----------------------|
-
-| Whitespace cleanup | Remove trailing/leading empty characters | `TRIM()` / `RTRIM()` |
-
-| Case normalization | Ensure consistent text casing | `CONCAT()`, `UPPER()`, `LOWER()` |
-
-| Name formatting | Standardize compound names and accents | String manipulation functions |
-
-| Advanced cleansing | Handle complex name formats and validation | Python (specialized libraries) |
-
-| Entity resolution | Detect potentially duplicated identities | Python (FuzzyWuzzy), record-linkage libraries |
-
+| Step               | Objective                                       | Example SQL / Tooling               |
+|--------------------|-------------------------------------------------|-------------------------------------|
+| Whitespace cleanup | Remove trailing/leading empty characters        | `TRIM()` / `RTRIM()`                |
+| Case normalization | Ensure consistent text casing                   | `CONCAT()`, `UPPER()`, `LOWER()`    |
+| Name formatting    | Standardize compound names and accents          | String manipulation functions       |
+| Advanced cleansing | Handle complex name formats and validation      | Python (specialized libraries)      |
+| Entity resolution  | Detect potentially duplicated identities        | Python (FuzzyWuzzy, record-linkage) |
 
 
 \## Business Impact
